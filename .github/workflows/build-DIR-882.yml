@@ -70,9 +70,9 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMARTDNS/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config
 	sed -i '/CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS/d' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .config
+	sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .config
         ######################################################################
-        #以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
+       	#以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
         ######################################################################
         if [ $KERNEL = "4.4" ] ; then
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST
@@ -119,7 +119,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=n" >> .config #zerotier ~1.3M
 	echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=y" >> .config
 	#流控QOS##
-        echo "CONFIG_FIRMWARE_INCLUDE_SQM=y" >> .config #SQM QOS#CPU超频
+       	echo "CONFIG_FIRMWARE_INCLUDE_SQM=y" >> .config #SQM QOS#CPU超频
         echo "CONFIG_FIRMWARE_INCLUDE_OC=y" >> .config #CPU超频开关
         echo 'CONFIG_FIRMWARE_MT7621_OC="0x362"' >> .config #此处填写对应频率的十六进制：
         fi
