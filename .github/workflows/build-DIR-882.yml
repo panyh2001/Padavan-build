@@ -90,8 +90,9 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> .config #aliddns
         echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=y" >> .config
         #流控QOS##
-        echo "CONFIG_FIRMWARE_INCLUDE_SQM=n" >> .config #SQM QOS#CPU超频
-        echo "CONFIG_FIRMWARE_INCLUDE_OC=n" >> .config #CPU超频开关
+        echo "CONFIG_FIRMWARE_INCLUDE_SQM=n" >> .config #SQM QOS
+        #CPU超频
+        echo "CONFIG_FIRMWARE_INCLUDE_OC=y" >> .config #CPU超频开关
         echo 'CONFIG_FIRMWARE_MT7621_OC="0x362"' >> .config #此处填写对应频率的十六进制：
         else
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST
